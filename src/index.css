@@ -6,62 +6,61 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 260 33% 50%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 260 30% 54%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 263 76% 75%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 260 33% 50%;
-
+    --background: 0 0% 0%;       /* Black */
+    --foreground: 195 100% 50%;  /* Neon Blue */
+    --card: 0 0% 5%;             /* Very dark grey */
+    --card-foreground: 195 100% 50%; 
+    --popover: 0 0% 5%;
+    --popover-foreground: 195 100% 50%;
+    
+    --primary: 195 100% 50%;     /* Neon Blue */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 281 100% 50%;   /* Vivid Purple */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 10%;
+    --muted-foreground: 195 100% 75%;
+    
+    --accent: 281 100% 50%;      /* Vivid Purple */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 100% 50%;   /* Bright Red */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 195 100% 50%;      /* Neon Blue */
+    --input: 0 0% 10%;
+    --ring: 281 100% 50%;        /* Vivid Purple */
+    
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --background: 0 0% 0%;       /* Black */
+    --foreground: 195 100% 50%;  /* Neon Blue */
+    --card: 0 0% 5%;             /* Very dark grey */
+    --card-foreground: 195 100% 50%; 
+    --popover: 0 0% 5%;
+    --popover-foreground: 195 100% 50%;
     
-    --primary: 260 30% 54%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 263 76% 75%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 195 100% 50%;     /* Neon Blue */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 281 100% 50%;   /* Vivid Purple */
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 195 100% 75%;
     
-    --accent: 263 76% 75%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 281 100% 50%;      /* Vivid Purple */
+    --accent-foreground: 0 0% 100%;
     
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 50%;   /* Bright Red */
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 263 76% 75%;
+    --border: 195 100% 50%;      /* Neon Blue */
+    --input: 0 0% 10%;
+    --ring: 281 100% 50%;        /* Vivid Purple */
+    
+    --radius: 0.5rem;
   }
 }
 
@@ -69,7 +68,7 @@
   * {
     @apply border-border;
   }
-
+  
   body {
     @apply bg-background text-foreground transition-colors duration-300 ease-in-out;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -157,4 +156,15 @@
 
 .staggered-animation > *:nth-child(6) {
   animation: fade-in 0.7s ease-out forwards 0.6s;
+}
+
+// Additional neon-themed utilities
+@layer utilities {
+  .neon-glow {
+    @apply shadow-[0_0_10px_theme('colors.portfolio.primary'),0_0_20px_theme('colors.portfolio.accent')];
+  }
+  
+  .neon-text {
+    @apply text-portfolio-primary drop-shadow-[0_0_5px_theme('colors.portfolio.primary')];
+  }
 }
