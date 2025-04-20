@@ -57,7 +57,7 @@
     @apply border-border;
   }
   
-  body {
+  html, body, #root {
     @apply bg-black text-portfolio-primary transition-colors duration-300 ease-in-out;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
@@ -110,7 +110,7 @@
 }
 
 .skill-card {
-  @apply bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  @apply bg-black border border-portfolio-primary text-portfolio-primary hover:border-portfolio-accent transition-colors duration-300;
 }
 
 .animated-item {
@@ -160,6 +160,6 @@
   @apply text-portfolio-primary;
 }
 
-.skill-card {
-  @apply bg-black border border-portfolio-primary text-portfolio-primary hover:border-portfolio-accent transition-colors duration-300;
+body, html, #root, main, div {
+  background-color: #000000 !important;
 }

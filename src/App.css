@@ -1,8 +1,19 @@
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #39FF14;
+}
+
+body, html {
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #39FF14;
 }
 
 .logo {
@@ -12,10 +23,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #39FF14);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #39FF14);
 }
 
 @keyframes logo-spin {
@@ -35,8 +46,10 @@
 
 .card {
   padding: 2em;
+  background-color: #000000;
+  border: 1px solid #39FF14;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #39FF14;
 }
