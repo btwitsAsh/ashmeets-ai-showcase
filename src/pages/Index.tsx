@@ -10,18 +10,17 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
-  // Add background grid pattern to the root element's style
   useEffect(() => {
     const root = document.documentElement;
     root.style.setProperty(
       '--bg-grid-pattern',
-      'radial-gradient(circle, #6E59A5 1px, transparent 1px)'
+      'radial-gradient(circle, #39FF14 1px, transparent 1px)' // Neon Green grid
     );
     root.style.backgroundSize = '30px 30px';
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
+    <div className="bg-black dark:bg-black min-h-screen text-portfolio-primary">
       <Navbar />
       <main>
         <Hero />

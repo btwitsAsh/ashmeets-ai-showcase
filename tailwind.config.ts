@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,14 +54,14 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         portfolio: {
-          primary: '#39FF14',
-          secondary: '#F97316',
-          accent: '#FF6037',
-          background: '#000000',
-          text: '#39FF14',
+          primary: '#39FF14',      // Neon Green
+          secondary: '#F97316',    // Bright Orange
+          accent: '#FF6037',       // Neon Orange
+          background: '#000000',   // Black
+          text: '#39FF14',         // Neon Green
           neon: {
-            green: '#39FF14',
-            orange: '#FF6037',
+            green: '#39FF14',      // Neon Green
+            orange: '#FF6037',     // Neon Orange
           },
         },
       },
