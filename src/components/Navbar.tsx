@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -62,10 +63,12 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Navigation Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
+            <ThemeToggle className="mr-2" />
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-portfolio-primary dark:hover:text-portfolio-accent"

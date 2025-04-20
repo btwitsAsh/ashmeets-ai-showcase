@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,12 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-        // Portfolio theme colors
         portfolio: {
-          primary: '#6E59A5',
-          secondary: '#7E69AB',
-          accent: '#9b87f5',
-          light: '#D6BCFA',
+          primary: '#7E69AB',
+          secondary: '#9b87f5',
+          accent: '#D6BCFA',
+          light: '#403E43',
           dark: '#1A1F2C',
         },
 			},
