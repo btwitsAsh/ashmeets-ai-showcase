@@ -53,14 +53,15 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         portfolio: {
-          primary: '#1EAEDB',
+          primary: '#39FF14',
           secondary: '#F97316',
-          accent: '#8B5CF6',
+          accent: '#FF6037',
+          background: '#000000',
+          text: '#39FF14',
           neon: {
-            blue: '#33C3F0',
-            pink: '#D946EF',
+            green: '#39FF14',
+            orange: '#FF6037',
           },
-          dark: '#000000',
         },
       },
       borderRadius: {

@@ -7,58 +7,46 @@
 @layer base {
   :root {
     --background: 0 0% 0%;       /* Black */
-    --foreground: 195 100% 50%;  /* Neon Blue */
-    --card: 0 0% 5%;             /* Very dark grey */
-    --card-foreground: 195 100% 50%; 
-    --popover: 0 0% 5%;
-    --popover-foreground: 195 100% 50%;
+    --foreground: 120 100% 50%;  /* Neon Green */
     
-    --primary: 195 100% 50%;     /* Neon Blue */
+    --primary: 120 100% 50%;     /* Neon Green */
     --primary-foreground: 0 0% 0%;
-    --secondary: 281 100% 50%;   /* Vivid Purple */
-    --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 10%;
-    --muted-foreground: 195 100% 75%;
+    --secondary: 22 100% 50%;    /* Neon Orange */
+    --secondary-foreground: 0 0% 0%;
     
-    --accent: 281 100% 50%;      /* Vivid Purple */
+    --accent: 22 100% 50%;       /* Neon Orange */
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 100% 50%;   /* Bright Red */
     --destructive-foreground: 0 0% 100%;
     
-    --border: 195 100% 50%;      /* Neon Blue */
+    --border: 120 100% 50%;      /* Neon Green */
     --input: 0 0% 10%;
-    --ring: 281 100% 50%;        /* Vivid Purple */
+    --ring: 22 100% 50%;         /* Neon Orange */
     
     --radius: 0.5rem;
   }
 
   .dark {
     --background: 0 0% 0%;       /* Black */
-    --foreground: 195 100% 50%;  /* Neon Blue */
-    --card: 0 0% 5%;             /* Very dark grey */
-    --card-foreground: 195 100% 50%; 
-    --popover: 0 0% 5%;
-    --popover-foreground: 195 100% 50%;
+    --foreground: 120 100% 50%;  /* Neon Green */
     
-    --primary: 195 100% 50%;     /* Neon Blue */
+    --primary: 120 100% 50%;     /* Neon Green */
     --primary-foreground: 0 0% 0%;
-    --secondary: 281 100% 50%;   /* Vivid Purple */
-    --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 10%;
-    --muted-foreground: 195 100% 75%;
+    --secondary: 22 100% 50%;    /* Neon Orange */
+    --secondary-foreground: 0 0% 0%;
     
-    --accent: 281 100% 50%;      /* Vivid Purple */
+    --accent: 22 100% 50%;       /* Neon Orange */
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 100% 50%;   /* Bright Red */
     --destructive-foreground: 0 0% 100%;
     
-    --border: 195 100% 50%;      /* Neon Blue */
+    --border: 120 100% 50%;      /* Neon Green */
     --input: 0 0% 10%;
-    --ring: 281 100% 50%;        /* Vivid Purple */
+    --ring: 22 100% 50%;         /* Neon Orange */
     
     --radius: 0.5rem;
   }
@@ -70,7 +58,7 @@
   }
   
   body {
-    @apply bg-background text-foreground transition-colors duration-300 ease-in-out;
+    @apply bg-black text-portfolio-primary transition-colors duration-300 ease-in-out;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -158,10 +146,9 @@
   animation: fade-in 0.7s ease-out forwards 0.6s;
 }
 
-// Additional neon-themed utilities
 @layer utilities {
   .neon-glow {
-    @apply shadow-[0_0_10px_theme('colors.portfolio.primary'),0_0_20px_theme('colors.portfolio.accent')];
+    @apply drop-shadow-[0_0_10px_theme('colors.portfolio.primary'),0_0_20px_theme('colors.portfolio.accent')];
   }
   
   .neon-text {
