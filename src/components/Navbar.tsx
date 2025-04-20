@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Navigation Button */}
           <div className="md:hidden flex items-center">
-            <ThemeToggle className="mr-2" />
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-portfolio-primary dark:hover:text-portfolio-accent"
